@@ -1,108 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Email Verification</title>
-<style>
-    /* General Styles */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f3f4f6;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        max-width: 600px;
-        margin: 20px auto;
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-    }
-    .header, .footer {
-        background-color: #f3f4f6;
-        text-align: center;
-        padding: 10px;
-    }
-    .header img, .footer img {
-        height: 30px;
-    }
-    .content {
-        padding: 20px;
-        text-align: center;
-    }
-    .subject {
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 10px;
-    }
-    .message {
-        font-size: 16px;
-        color: #333;
-        line-height: 1.6;
-    }
-    .verification-code {
-        font-size: 24px;
-        font-weight: bold;
-        color: #5A4BE7;
-        background-color: #e8e6ff;
-        padding: 10px 20px;
-        border-radius: 8px;
-        margin: 20px 0;
-        display: inline-block;
-    }
-    .footer-text {
-        font-size: 14px;
-        color: #888;
-        margin-top: 20px;
-    }
-    .social-links img {
-        margin: 0 8px;
-        height: 24px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header,
+        .footer {
+            background-color: #f3f4f6;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .header img,
+        .footer img {
+            height: 30px;
+        }
+
+        .content {
+            padding: 20px;
+
+        }
+
+        .subject {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .message {
+            line-height: 1.6;
+            color: #000000;
+            text-align: center;
+        }
+
+        .bigText {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+
+        .parent-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .verification-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-color: #5F3AFB;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 20%;
+        }
+
+
+        .footer-text {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        .social-links img {
+            margin: 0 8px;
+            height: 24px;
+        }
+
+
+        .footer-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-container p {
+            margin: 5px 0;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            margin: 10px 0;
+        }
+
+        .social-icons a {
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .unsubscribe {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+        }
+
+        .logo span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .underline {
+            height: 2px;
+            background-color: #000;
+            margin: 20px 0;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container">
-    <!-- Header -->
-    <div class="header">
-        <img src="https://via.placeholder.com/30x30" alt="EAZETRADES Logo">
-    </div>
-
-    <!-- Content -->
-    <div class="content">
-        <div class="subject">Subject Line</div>
-        
-        <!-- Image Section -->
-        <img src="https://via.placeholder.com/500x250" alt="Illustration" style="max-width: 100%; margin: 20px 0;">
-
-        <!-- Message Section -->
-        <div class="message">
-            <p>Dear Pelumi Moronfolu,</p>
-            <p>Thank you for creating an account with Eazetrades online market. To ensure the security of your account and provide you with full access to our services, we need to verify your email address. Here is your verification code, please verify your email address.</p>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="./images/eazetrades-logo-3 3.png" alt="EAZETRADES Logo">
         </div>
 
-        <!-- Verification Code -->
-        <div class="verification-code">81255884</div>
+        <!-- Content -->
+        <div class="content">
+            <div class="subject">Subject Line</div>
 
-        <!-- Additional Message -->
-        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p class="message">Donec ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
+            <!-- Image Section -->
+            <img src="./images//Amigos Design Jam.png" alt="Illustration" style="max-width: 100%; margin: 20px 0;">
 
-    <!-- Footer -->
-    <div class="footer">
-        <p class="footer-text">Company Inc. | 1234 Street Address, City, State | Unsubscribe</p>
-        <div class="social-links">
-            <a href="#"><img src="https://via.placeholder.com/24x24" alt="Facebook"></a>
-            <a href="#"><img src="https://via.placeholder.com/24x24" alt="Twitter"></a>
-            <a href="#"><img src="https://via.placeholder.com/24x24" alt="Instagram"></a>
+            <!-- Message Section -->
+            <div class="message">
+                <p class="bigText">Dear Pelumi Moronfolu,</p>
+                <p>Thank you for creating an account with Eazetrades online market. To ensure the security of your
+                    account and provide you with full access to our services, we need to verify your email address. Here
+                    is your verification code, please verify your email address.</p>
+            </div>
+
+            <div class="parent-container">
+
+                <!-- Verification Code -->
+                <div class="verification-code">81255884</div>
+            </div>
+
+            <!-- Additional Message -->
+            <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="message">Donec ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div class="underline"></div>
+
         </div>
+
+        <!-- Footer -->
+        <div class="footer-container">
+            <p>Corporation</p>
+            <p>You are receiving this email because you opted in via our website.</p>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-youtube"></i>
+                <i class="fa fa-world"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+
+            <p>Address, #PC</p>
+            <p>City, State.</p>
+            <a href="#" class="unsubscribe">Unsubscribe</a>
+
+            <!-- Logo and Brand Name -->
+            <div class="logo">
+                <img src="/images/eazetrades-logo-3 3.png" alt="Eazetrades Logo">
+                <span>EAZETRADES</span>
+            </div>
+        </div>
+
     </div>
-</div>
 
 </body>
+
 </html>
